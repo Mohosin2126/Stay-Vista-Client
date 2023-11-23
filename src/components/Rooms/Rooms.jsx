@@ -16,7 +16,7 @@ const Rooms = () => {
 
 
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="pt-12 grid grid-cols-1 md:grid-cols-3 gap-5">
           {
             rooms.map(room=><Card room={room} key={room._id}></Card>)
           }
