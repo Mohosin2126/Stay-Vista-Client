@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import Card from "./Card";
 
 const Rooms = () => {
  const [rooms,setRooms]=useState([])
@@ -13,7 +14,9 @@ const Rooms = () => {
 
     return (
         <div>
-          <h1>{rooms.length}</h1>
+          {
+            rooms.map(room=><Card room={room} key={room._id}></Card>)
+          }
         </div>
     );
 };
