@@ -1,9 +1,19 @@
+import Container from "../../Shared/Container";
+import { categories } from "./CategoriesData";
+import CategoryBox from "./CategoryBox";
 
 const Categories  = () => {
     return (
-        <div>
-            
-        </div>
+        <Container>
+           
+          <div className="pt-4 flex items-center justify-between overflow-x-auto">
+            {
+                categories.map(category=><CategoryBox icon={category.icon} 
+                  label={category.label}
+                  key={category.label}></CategoryBox>)
+            }
+          </div>
+        </Container>
     );
 };
 
